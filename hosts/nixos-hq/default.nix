@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   imports = [
@@ -12,4 +12,5 @@
   indexyz.environment.base.enable = true;
   zero.services.openvscode-server.enable = true;
 
+  environment.systemPackages = with pkgs; [ nil ];
 }

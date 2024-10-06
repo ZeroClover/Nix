@@ -3,6 +3,7 @@
 let
   ownedKeys = [
     "age1l3vzu8kt7yka23zk5w095ygfwvwcuvdhhp0arql3t2mxt8rgp9yspcqx9q"
+    "age1mz62xnle0ms8yfvdr3qwa3jy950qxw7l9vz3vqv3jhh0dta2wa5qurg34r"
   ];
 
   hosts = {
