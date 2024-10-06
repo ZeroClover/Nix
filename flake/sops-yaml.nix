@@ -2,11 +2,11 @@
 
 let
   ownedKeys = [
-
+    "age1l3vzu8kt7yka23zk5w095ygfwvwcuvdhhp0arql3t2mxt8rgp9yspcqx9q"
   ];
 
   hosts = {
-
+    nixos-hq = "age1dtjxakfdatagze3kjna4nx20f3d8ehwgn4v3t9jvqmfvenq8gvfsg7vpsk";
   };
 
   allHostKeys = lib.mapAttrsToList (_: cfg: cfg) hosts;
@@ -21,5 +21,9 @@ let
   );
 in
 {
-  creation_rules = [ ] ++ hostsCreateionRule;
+  creation_rules = [
+    (mkNamedCreationRule "openvscode-server" [
+      hosts.nixos-hq
+    ])
+  ] ++ hostsCreateionRule;
 }

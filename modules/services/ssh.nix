@@ -1,10 +1,16 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 with lib;
 let
   cfg = config.zero.services.ssh;
   keys = [
     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBuNngR3JgkjC7I7g8/v4YQNH8Pu13bZcCl9q7Ho8hYJ"
+    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJg/HHwlBxt2/Io+4M5j6Qwwi8IMTYe8XoDijkfTXHoE zero@root.me"
   ];
 in
 {
