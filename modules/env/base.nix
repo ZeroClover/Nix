@@ -51,6 +51,8 @@ in
       };
     };
 
+    users.users.root.shell = lib.mkForce pkgs.zsh;
+
     programs.zsh = {
       enable = true;
       enableCompletion = true;
