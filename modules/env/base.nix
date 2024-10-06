@@ -51,6 +51,33 @@ in
       };
     };
 
-    programs.zsh.enable = true;
+    programs.zsh = {
+      enable = true;
+      enableCompletion = true;
+      enableBashCompletion = true;
+
+      autosuggestions.enable = true;
+      autosuggestions.extraConfig.ZSH_AUTOSUGGEST_USE_ASYNC = "y";
+
+      syntaxHighlighting.enable = true;
+      syntaxHighlighting.highlighters = [
+        "main"
+        "brackets"
+        "pattern"
+        "root"
+        "line"
+      ];
+
+      ohMyZsh = {
+        enable = true;
+        theme = "robbyrussell";
+        plugins = [
+          "git"
+          "sudo"
+          "docker"
+          "direnv"
+        ];
+      };
+    };
   };
 }

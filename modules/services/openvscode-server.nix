@@ -22,6 +22,8 @@ in
       };
     };
 
+    networking.firewall.allowedTCPPorts = [ 4444 ];
+
     services.openvscode-server = {
       enable = true;
       user = "zero";
